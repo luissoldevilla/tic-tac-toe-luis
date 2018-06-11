@@ -1,2 +1,48 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$boardgamecolor: black;
+
+body {
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  left: 50%;
+  margin-left: -230px;
+  position: absolute;
+  top: 100px;
+}
+
+td {
+  border: 5px solid $boardgamecolor;
+  height: 150px;
+  width: 150px;
+}
+
+table tr:first-child td {
+  border-top: 0;
+  // background-color: yellow;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+  // background-color: red;
+}
+
+table tr td:first-child {
+  border-left: 0;
+  // background-color: green;
+}
+
+table tr td:last-child {
+  border-right: 0;
+  // background-color: green;
+}
+
+footer {
+  margin-top: 550px;
+}
