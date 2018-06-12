@@ -11,20 +11,29 @@ const switchPlayers = function () {
   } else {
     currentPlayer = 'X'
   }
-  console.log(currentPlayer)
   return currentPlayer
 }
+
+const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 const addHandlers = function () {
   $('#form-signUp').on('submit', onFormSignUp)
   $('#form-signIn').on('submit', onFormSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('click', onSignOut)
-  $('.cell').on('click', function () {
-    console.log(this)
-    $(this).text(currentPlayer)
-    switchPlayers()
-  })
+  $('.cell').on('click', onGameBoard)
+}
+
+const onGameBoard = function (event) {
+  // console.log(gameBoard)
+  gameBoard.splice(event.target.id, 1, currentPlayer)
+  console.log(gameBoard)
+  // console.log(event.target.id)
+  // event.target.id
+  $(this).text(currentPlayer)
+  // console.log(gameBoard)
+  switchPlayers()
+  // }
 }
 
 const onFormSignUp = function (event) {
@@ -61,16 +70,28 @@ const onSignOut = function (event) {
     .catch(ui.signOutFail)
 }
 
-const gameBoard = ['', '', '', '', '', '', '', '', '']
+// Grab a value of the click on cell and push it
+// to the corresponding gameBoard array index
+// const gameBoard = ['', '']
+//
+// const onGameBoard = function () {
+//   if ($('#1').on('click')) {
+//     addToBoard()
+//   }
+//   return this
+// }
+//
+// const addToBoard = function () {
+//   gameBoard.splice(1, 0, 'thisworks?')
+//   console.log('hello ')
+// }
 
-const onGameBoard = function (event) {
-  event.preventDefault()
-
-  console.log(gameBoard)
-}
+// const addToBoard = function () {
+//   gameBoard.splice(1, 0, 'thisworks?')
+//   console.log('hello ')
+// }
 
 module.exports = {
   addHandlers,
-  gameBoard,
-  onGameBoard
+  gameBoard
 }
