@@ -43,6 +43,9 @@ const signOutFail = function (data) {
   $('#user-message-signOut').append('Something went wrong')
 }
 
+const newGameSuccess = function () {
+
+}
 module.exports = {
   signUpSuccess,
   signUpFail,
@@ -51,5 +54,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFail,
   signOutSuccess,
-  signOutFail
+  signOutFail,
+  newGameSuccess
 }
