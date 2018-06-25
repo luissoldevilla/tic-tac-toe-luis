@@ -75,7 +75,7 @@
 
               <div id="user-message-signIn"></div>
 
-              <button type="submit" class="btn btn-primary">Sign In</button>
+              <button id="sign-in-button" type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Sign In</button>
 
             </form>
 
@@ -86,8 +86,12 @@
       </div>
 
       <div>
+        <p id="player"></p>
+      </div>
 
-        <table>
+      <div>
+
+        <table id="table">
 
           <tr>
 
@@ -118,16 +122,25 @@
     </div>
 
     <div>
-      <p id="player"></p>
-    </div>
-
-    <div>
-
       <button id="new-game" class="btn btn-primary">New Game</button>
-
     </div>
 
-    <footer>
+    <div id="win-message">
+      <h4 id="x-winner-message"></h4>
+      <h4 id="o-winner-message"></h4>
+    </div>
+
+      <div id="score-Board">
+        <h4 id="sb-title">Score</h4>
+
+          <h3> Games Played:</h3>
+            <p id="play-count"></p>
+          <h3> Win X:</h3>
+            <p id="x-win-count"></p>
+          <h3> Win O:</h3>
+            <p id="o-win-count"></p>
+
+      </div>
 
       <form id="change-password">
 
@@ -155,7 +168,6 @@
 
       <div id="user-message-signOut"></div>
 
-    </footer>
 
     </body>
 </html>

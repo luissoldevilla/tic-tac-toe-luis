@@ -12,6 +12,7 @@ body {
 table {
   border-collapse: collapse;
   left: 50%;
+  margin-top: 25px;
   margin-left: -230px;
   position: absolute;
   top: 100px;
@@ -43,10 +44,45 @@ table tr td:last-child {
   // background-color: green;
 }
 
-#new-game {
-  margin-left: 570px;
+#password-change {
+  position: fixed;
+  left: 500px;
 }
 
-footer {
-  margin-top: 550px;
+#new-game {
+  margin-left: 1px;
+}
+
+#score-Board {
+  #sb-title {
+    text-align: center;
+  }
+
+  text-indent: 40px;
+  text-align: justify;
+  width: 500px;
+  display: inline-block;
+  border-style: solid;
+  border-width: 5px;
+  margin-top: 480px;
+}
+
+#change-password {
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  position: absolute;
+}
+
+#sign-out {
+  margin-left: -290px;
+  position: absolute;
+  margin-top: 860px;
+}
+
+#win-message {
+  margin-top: 150px;
+  position: absolute;
+  margin-left: 60px;
+  margin-bottom: 5px;
 }

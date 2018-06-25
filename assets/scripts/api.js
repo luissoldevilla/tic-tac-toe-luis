@@ -41,7 +41,8 @@ const signOut = function (data) {
   })
 }
 
-const newGame = function (data) {
+const newGame = function () {
+  console.log()
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/games',
@@ -51,10 +52,27 @@ const newGame = function (data) {
   })
 }
 
+const updateMove = function () {
+  // console.log('store is', store)
+  console.log('store.user is', store.user)
+  console.log('store.game is', store.game)
+  const gameData = {}
+  gameData.game = store.game
+  console.log('gameData.game is', gameData.game)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/games/' + store.game.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: gameData
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  newGame
+  newGame,
+  updateMove
 }

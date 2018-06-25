@@ -8,14 +8,6 @@ const events = require('./events.js')
 
 $(() => {
   // your JS code goes here
-  // $('#1').on('click', events.clickX || events.clickO)
-  // $('#2').on('click', events.clickX || events.clickO)
-  // $('#3').on('click', events.clickX || events.clickO)
-  // $('#4').on('click', events.clickX || events.clickO)
-  // $('#5').on('click', events.clickX || events.clickO)
-  // $('#6').on('click', events.clickX || events.clickO)
-  // $('#7').on('click', events.clickX || events.clickO)
-  // $('#8').on('click', events.clickX || events.clickO)
   events.addHandlers()
   $(document).ready(function () {
     $('#myModal').modal({
