@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+    <body>
+
+      <h1>TIC TAC TOE</h1>
+
+      <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign Up To Play</h5>
+
+            </div>
+            <div class="modal-body">
+
+            <form id="form-signUp">
+
+              <div>
+
+                <label for="inputEmail1">Email address</label>
+                <input name="credentials[email]" type="email" class="form-control" placeholder="Enter email">
+
+              </div>
+
+              <div>
+
+                <label for="inputPassword1">Password</label>
+                <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+
+              </div>
+
+              <div>
+
+                <label for="inputPasswordConfirm">Password</label>
+                <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Password">
+
+              </div>
+
+              <div id="user-message-signUp"></div>
+
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+
+            </form>
+
+            <h5> or </h5>
+            <h4> Sign In </h4>
+
+            <form id="form-signIn">
+
+              <div>
+
+                <label for="inputEmail1">Email address</label>
+                <input name="credentials[email]" type="email" class="form-control" placeholder="Enter email">
+
+              </div>
+
+              <div>
+
+                <label for="inputPassword1">Password</label>
+                <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+
+              </div>
+
+              <div id="user-message-signIn"></div>
+
+              <button id="sign-in-button" type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Sign In</button>
+
+            </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p id="player"></p>
+      </div>
+
+      <div>
+
+        <table id="table">
+
+          <tr>
+
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+
+          </tr>
+
+          <tr>
+
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+
+          </tr>
+
+          <tr>
+
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+
+          </tr>
+
+        </table>
+
+    </div>
+
+    <div>
+      <button id="new-game" class="btn btn-primary">New Game</button>
+    </div>
+
+    <div id="win-message">
+      <h4 id="x-winner-message"></h4>
+      <h4 id="o-winner-message"></h4>
+    </div>
+
+      <div id="score-Board">
+        <h4 id="sb-title">Score</h4>
+
+          <h3> Games Played:</h3>
+            <p id="play-count"></p>
+          <h3> Win X:</h3>
+            <p id="x-win-count"></p>
+          <h3> Win O:</h3>
+            <p id="o-win-count"></p>
+
+      </div>
+
+      <form id="change-password">
+
+        <div>
+
+          <label>Change Password</label>
+          <input name="passwords[old]" type="password" class="form-control" placeholder="Old Password">
+
+        </div>
+
+        <div>
+
+          <label>New Password</label>
+          <input name="passwords[new]" type="password" class="form-control" placeholder="New Password">
+
+        </div>
+
+        <div id="user-message-passwordChange"></div>
+
+        <button type="submit" class="btn btn-primary">Change Password</button>
+
+      </form>
+
+      <button id="sign-out" class="btn btn-primary">Sign Out</button>
+
+      <div id="user-message-signOut"></div>
+
+
+    </body>
+</html>
